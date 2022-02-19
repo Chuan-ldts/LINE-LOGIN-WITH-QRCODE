@@ -6,14 +6,12 @@ import requests, json
 class QRlogin:
 
     def __init__(self):
-        self.QRCODE_HOST = "http://chuan-ldts.com.tw"
+        self.HOST = "http://chuan-ldts.com.tw"
         self.LOGIN_QR = "/LoginQR"
         self.CREATE_NEW_PROGRAM = "/CreateNewProgram"
         self.GET_QRCODE = "/getQRcode"
         self.GET_PINCODE = "/getPinCode"
         self.GET_AUTHTOKEN = "/getAuthToken"
-
-        self.HOST = requests.get(self.QRCODE_HOST).url
 
         self.JSON = {
             "username": "",                   # Insert your username
